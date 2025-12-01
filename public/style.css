@@ -1,0 +1,221 @@
+/* Reset et base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+/* Container principal */
+.container {
+  max-width: 600px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 600;
+  letter-spacing: -0.5px;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #666;
+  font-weight: 400;
+}
+
+/* Main content */
+main {
+  background: #fafafa;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+/* Market info */
+.market-title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #000;
+  line-height: 1.4;
+}
+
+.market-link {
+  display: inline-block;
+  font-size: 13px;
+  color: #0066cc;
+  text-decoration: none;
+  margin-bottom: 32px;
+  transition: color 0.2s;
+}
+
+.market-link:hover {
+  color: #0052a3;
+}
+
+/* Options */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  transition: all 0.2s;
+}
+
+.option.alert {
+  border-color: #ff4444;
+  background: #fff5f5;
+}
+
+.option-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #000;
+  flex: 1;
+}
+
+.option-probability {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-right: 12px;
+  letter-spacing: -0.5px;
+}
+
+.option.alert .option-probability {
+  color: #ff4444;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: #ff4444;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+}
+
+.last-update {
+  font-size: 13px;
+  color: #999;
+  font-weight: 400;
+}
+
+#last-update {
+  color: #666;
+  font-weight: 500;
+}
+
+/* Loading */
+.loading {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  margin: 0 auto 16px;
+  border: 3px solid #f0f0f0;
+  border-top-color: #000;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading p {
+  color: #666;
+  font-size: 14px;
+}
+
+/* Error */
+.error {
+  text-align: center;
+  padding: 40px 20px;
+  color: #ff4444;
+}
+
+.error-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.error-message {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 640px) {
+  h1 {
+    font-size: 28px;
+  }
+
+  main {
+    padding: 24px;
+  }
+
+  .option {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .option-probability {
+    margin-right: 0;
+  }
+
+  .badge {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+
+  .option {
+    position: relative;
+  }
+}

@@ -1,0 +1,29 @@
+# Dépendances
+node_modules/
+package-lock.json
+
+# Variables d'environnement
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build
+dist/
+build/
+
+# Cache
+.cache/
+.vercel/

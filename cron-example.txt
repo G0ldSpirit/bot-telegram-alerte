@@ -1,0 +1,25 @@
+# Exemple de configuration crontab
+# Pour surveiller Polymarket sans serveur web 24/7
+
+# Éditer le crontab:
+# crontab -e
+
+# Ajouter cette ligne pour exécuter toutes les 5 minutes:
+# */5 * * * * cd /chemin/vers/bot-telegram-alerte && /usr/bin/node src/monitor/monitor.js --once >> logs/cron.log 2>&1
+
+# Exemples de fréquences:
+
+# Toutes les 5 minutes
+*/5 * * * * cd /home/user/bot-telegram-alerte && node src/monitor/monitor.js --once
+
+# Toutes les 10 minutes
+*/10 * * * * cd /home/user/bot-telegram-alerte && node src/monitor/monitor.js --once
+
+# Toutes les heures
+0 * * * * cd /home/user/bot-telegram-alerte && node src/monitor/monitor.js --once
+
+# Tous les jours à 9h00
+0 9 * * * cd /home/user/bot-telegram-alerte && node src/monitor/monitor.js --once
+
+# Note: Remplacer /home/user/bot-telegram-alerte par le chemin réel de votre installation
+# Note: S'assurer que le fichier .env est présent dans le répertoire

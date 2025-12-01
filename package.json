@@ -1,0 +1,26 @@
+{
+  "name": "polymarket-telegram-alert",
+  "version": "1.0.0",
+  "description": "Système de surveillance Polymarket avec alertes Telegram et interface web",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "monitor": "node src/monitor/monitor.js",
+    "dev": "nodemon src/index.js",
+    "test": "node src/test.js"
+  },
+  "keywords": ["polymarket", "telegram", "bot", "monitoring", "alerts"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0",
+    "express": "^4.18.2",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.3.1",
+    "axios": "^1.6.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
